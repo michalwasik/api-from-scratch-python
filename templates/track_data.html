@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+th.b {
+  font-family: Arial, Helvetica, sans-serif;
+}
+td.a {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+<h1>{{track_name}}</h1>
+<a href="/">GO TO INDEX SITE</a>
+<br><br>
+<form target="_self" method="post">
+  <label for="driver">Your name:</label><br>
+  <input type="text" id="driver" name="driver"><br>
+  <label for="car">Car:</label><br>
+  <input type="text" id="car" name="car"><br>
+  <label for ="time">Your time:</label><br>
+  <input type ="text" id="time" name = "time"><br>
+  <input type="submit" value="Submit">
+  </form>
+<table style="width:100%">
+  <tr>
+    <th class="b">Driver</th>
+    <th class="b">Car</th>
+    <th class="b">Lap Time</th>
+    <th class="b">Added Time</th>
+  </tr>
+  {% for obj in data %}
+  <tr>
+    <td class="a">{{obj.driver}}</td>
+    <td class="a">{{obj.car}}</td>
+    <td class="a">{{obj.time}}</td>
+    <td class="a">{{obj.added}}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
