@@ -7,6 +7,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 app=Flask(__name__)
 
+
 def show_track(track):
     item = session.query(Track).filter_by(slugname=track).first()
     return render_template('track_data.html', track_name=item.name, data=sorted(item.stuff, key=lambda d: d.time))
