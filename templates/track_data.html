@@ -7,13 +7,45 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;
+  text-align: center;
+  font-size:19px;
 }
 th.b {
   font-family: Arial, Helvetica, sans-serif;
 }
 td.a {
   font-family: "Times New Roman", Times, serif;
+}
+label{
+font-size:17px;
+}
+input[type=text]{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size:20px;
+}
+div.but{
+width: 100px;
+margin-top:20px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom: 50px;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px 25px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  font-size:17px;
+}
+div.form{
+width: 100%;
+margin-top:10px;
+margin-left:670px;
 }
 </style>
 </head>
@@ -22,14 +54,18 @@ td.a {
 <a href="/">GO TO INDEX SITE</a>
 <br><br>
 <form target="_self" method="post">
+  <div class="form">
   <label for="driver">Your name:</label><br>
   <input type="text" id="driver" name="driver"><br>
   <label for="car">Car:</label><br>
   <input type="text" id="car" name="car"><br>
   <label for ="time">Your time:</label><br>
-  <input type ="text" id="time" name = "time"><br>
-  <input type="submit" value="Submit">
-  </form>
+  <input type ="text" id="time" name = "time">
+  </div>
+<div class="but">
+    <button type="submit">Submit</button>
+</div>
+</form>
 <table style="width:100%">
   <tr>
     <th class="b">Driver</th>

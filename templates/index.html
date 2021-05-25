@@ -6,11 +6,7 @@
     -moz-column-count: 3;
     column-count: 3;
     font-size: 20px;
-    margin: 0 0 3px 0;
-
-}
-li {
-  margin-bottom: 15px;
+    margin: 5px 0 0 3px;
 }
 
     </style>
@@ -18,7 +14,7 @@ li {
 <body>
     <ul>
         {% for obj in data %}
-        <li><a href="/track/{{obj.slugname}}">{{obj.name}}</a></li>
+        <a href="/track/{{obj.slugname}}">{{obj.name}}</a><br><br>
         {% endfor %}
     </ul>
 </body>
